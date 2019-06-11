@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="urf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+		<title> Lee Tsz Lok Homepage</title>
+		<style type="text/css">
+
+
+	.title{background-color:#e5feff;color:#cbaaff;font-size:30px;font-weight:bold;padding:10px 20px;font-family:"Times New Roman";width:fit-content;}
+
+	.aboutme{font-size:30px;padding:10px;margin:10px;background-color:white;width:180px;text-align:center;line-height:20px;border:none;}
+
+	.contactme{font-size:30px;padding:10px;margin:10px;background-color:white;width:180px;text-align:center;line-height:20px;border:none;}
+
+	.toggle{font-size:30px;padding:10px;margin:10px;border:none;background-color:white;}
+
+	.menu{margin:20px;}
+
+	.hide{display:none;}
+
+	@media screen and (max-width:600px){
+	.aboutme{width:100%;text-align:center;}
+	.contactme{width:100%;text-align:center;}
+	.title{width:100%;text-align:center;font-size:24px;}
+
+	}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+overflow:hidden;
+background-color:#333;
+
+
+}
+
+li  {
+float:left;
+border-right:1px solid #bbb;
+
+}
+
+li a{
+display:block;
+color:white;
+text-align:center;
+padding:20px 50px;
+text-decoration:underline;
+}
+
+li:last-child{
+border-right:none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+
+}
+
+footer{
+    width: 100%;
+    height:100px;   
+    position:absolute;
+    bottom:0px;
+    left:0px;
+	padding:10px;
+    background: #333;
+}
+--------------------- 
+		</style>
+		<script type="text/javascript">
+
+
+function change(){
+var spanObj=window.document.getElementById("emotion");
+spanObj.innerHTML=":O";
+spanObj.style.display="none";}
+
+function aboutme(){
+}
+function contactme(){
+}
+function toggle(){
+/*var menu=document.getElementById("menu");
+if(menu.style.display=="none"){
+menu.style.display="block";
+}
+else {menu.style.display="none"};
+}*/
+var menu=document.getElementById("menu");
+menu.classList.toggle("hide");
+}
+
+function over(element){
+element.style.color="red";
+
+}
+function out(element){
+element.style.color="black";
+}
+
+function leetszlok(){
+}
+
+function init(){
+var btn=document.getElementById("btn");
+btn.onclick=function(){
+alert("Clicked");
+};
+}
+
+
+		</script>
+
+	</head>
+
+	<body style="margin:0px;background-color:#efefef;" onload="init();">
+
+
+		<div class="title" Onclick="window.location.href='index.html'"> Lee Tsz Lok </div>	
+
+		<ul>
+			<li>
+				<a class="active" href="http://localhost/home.html">Home</a>
+			</li>
+
+			<li>
+				<a href="http://localhost/contact.html">Contact</a>
+			</li>
+			<li>
+				<a href="http://localhost/about.html">About</a>
+			</li>
+			<li style="float:right">
+				<a href="http://localhost/login.html">Login</a>
+			</li>
+
+
+		</ul>
+
+
+
+		<p style="font-size:20px; padding:20px 20px;"> Hello, Welcome to my homepage, In there, I will show you some functions.</p>
+
+
+
+
+		<button id="btn"> Click</button>
+
+		<div/>
+		<span onmouseover="over(this);" onmouseout="out(this);">Test</span>
+
+
+		<footer>
+			<p style="color:white;">&copy; 2019</p>		
+			<p style="color:white;">Posted by Lee Tsz Lok</p>
+			<p style="color:white;">Contact information: <a href="mailto:leetszlok909@icloud.com" style="color:white">leetszlok909@icloud.com</a>.</p>
+		</footer>
+
+
+	</body>
+</html>
