@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="urf-8"/>
 		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title> Lee Tsz Lok Homepage</title>
 		<style type="text/css">
 
@@ -75,7 +76,8 @@ footer{
 }
 --------------------- 
 		</style>
-		<script type="text/javascript">
+		<script type="text/javascript" src="date_time.js">
+		
 
 
 function change(){
@@ -144,17 +146,19 @@ alert("Clicked");
 
 		</ul>
 
-		<img src="back.jpg" alt="no see me." width="100%" height="100%">
+	<img src="back.jpg" alt="no see me." width="100%" height="100%">
+
+		<p style="font-size:20px; margin:10px 10px;"> Hello, Welcome to my homepage, In there, I will show you some functions.</p>
+		
+		
+		 <p style="font-size:20px; margin:10px 10px;"> Now is <span id="date_time"></span>	</p>	 
+          <script type="text/javascript"> window.onload = date_time('date_time');</script>
 
 
-		<p style="font-size:20px; padding:20px 20px;"> Hello, Welcome to my homepage, In there, I will show you some functions.</p>
+		<button id="btn" style="margin:10px"> Click</button>
 
-
-
-
-		<button id="btn"> Click</button>
-
-		<div/>
+	
+		
 		<span onmouseover="over(this);" onmouseout="out(this);">Test</span>
 
 
