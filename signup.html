@@ -4,6 +4,8 @@
 		<meta charset="urf-8"/>
 		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
 		<title> Lee Tsz Lok Homepage</title>
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
 		<style type="text/css">
 .title{background-color:#e5feff;color:#cbaaff;font-size:30px;font-weight:bold;padding:10px 20px;width:fit-content;}
 .menu{margin:20px;}
@@ -111,10 +113,39 @@ input[type=submit]:hover {
 	
 	
 	}
+	
+	
+	
 		</style>
-		<script type="text/javascript" src="date_time.js">
+		<script type="text/javascript" src="date_time.js"></script>
+				<script type="text/javascript">
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAv4JbqLxAUMBqCjph32usYR8ckjpcG074",
+    authDomain: "leetszlok909-7e9bb.firebaseapp.com",
+    databaseURL: "https://leetszlok909-7e9bb.firebaseio.com",
+    projectId: "leetszlok909-7e9bb",
+    storageBucket: "leetszlok909-7e9bb.appspot.com",
+    messagingSenderId: "771176148200",
+    appId: "1:771176148200:web:8afab39961ee716d"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
-				</script>
+
+
+var db = firebase.firestore();
+function storedata() {
+var username=document.getElementById("user").value;
+var passowrd=document.getElementById("pass").value;
+  db.collection("user").doc(username).set({
+    name: username,
+    pass: passowrd,
+  });
+}
+
+
+</script>
 
 			</head>
 			<body style="margin:0px;background-color:#efefef;"">
@@ -140,22 +171,19 @@ input[type=submit]:hover {
 				
 				
 <div class="container">
-  <form action="signup.php" method="post">
+  <form action="signupsuccessfully.html">
     <div class="row">
       <p class="context"style="text-align:center">Sign up your account</p>
       <div class="col">
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="password" name="password" placeholder="Password" required>		
-		 <input type="email" name="email" placeholder="Email" required>		
-        <input type="submit" value="SignUp">
+        <input id="user" type="text" name="username" placeholder="Username" required>
+        <input id="pass" type="password" name="password" placeholder="Password" required>		
+		 <input id="emailaddress" type="email" name="email" placeholder="Email" required>		
+        <input type="submit" value="SignUp" onclick="storedata()">
       </div>
       
     </div>
   </form>
 </div>
-
-
-
 
 				
 				
