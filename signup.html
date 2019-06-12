@@ -138,9 +138,11 @@ var db = firebase.firestore();
 function storedata() {
 var username=document.getElementById("user").value;
 var passowrd=document.getElementById("pass").value;
+var emailaddress=document.getElementById("emailaddress").value;
   db.collection("user").doc(username).set({
     name: username,
     pass: passowrd,
+	email:emailaddress,
   });
 }
 
