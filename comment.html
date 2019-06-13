@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="urf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+		<title> Lee Tsz Lok Homepage</title>
+		<style type="text/css">
+.title{background-color:#e5feff;color:#cbaaff;font-size:30px;font-weight:bold;padding:10px 20px;width:fit-content;}
+.menu{margin:20px;}
+.hide{display:none;}
+.context{font-size:20px;margin:10px 10px;overflow-y:auto;height:300px;width:fit-content;}
+.footfont{color:white; margin-left:10px;font-size:20px;}
+.image{width:100%;height:280px;}
+.listlink{font-size:20px;}	
+.active { background-color: #4CAF50; color: white;}
+footer{width: 100%;height:180px;position:relative;background: #333;bottom:0;}
+ul { list-style-type: none; margin: 0; padding: 0;overflow:hidden;background-color:#333;}
+li {float:left;border-right:1px solid #bbb;}
+li a{display:inline-block;color:white;text-align:center;padding:20px 50px;text-decoration:none;}
+li:last-child{border-right:none;}
+li a:hover:not(.active) { background-color: #111;}
+
+	@media screen and (max-width:800px){
+	.title{width:fit-content;text-align:center;font-size:20px;}
+	footer{height:130px;}
+	.image{	width:100%;	height:80px;}
+	.listlink{font-size:15px;}	
+	.footfont{color:white; margin-left:10px;font-size:10px;}
+	.context{font-size:10px;overflow-y: auto; height:300px;width:300px;}
+	li a{display:inline-block;color:white;text-align:center;padding:20px 20px;text-decoration:none;}
+	}
+}
+		</style>
+		<script type="text/javascript" src="date_time.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+		<script type="text/javascript">
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAv4JbqLxAUMBqCjph32usYR8ckjpcG074",
+    authDomain: "leetszlok909-7e9bb.firebaseapp.com",
+    databaseURL: "https://leetszlok909-7e9bb.firebaseio.com",
+    projectId: "leetszlok909-7e9bb",
+    storageBucket: "leetszlok909-7e9bb.appspot.com",
+    messagingSenderId: "771176148200",
+    appId: "1:771176148200:web:8afab39961ee716d"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+
+
+var db = firebase.firestore();
+function storedata(){
+var username=document.getElementById("user").value;
+var opinion=document.getElementById("comm").value;
+db.collection("comment").doc("user").set({name:username,comment:opinion});
+}
+
+
+function getdata() {
+  var docRef = db.collection("comment").doc("user");
+  docRef.get().then(function(doc) {
+     
+}
+
+
+</script>
+
+	</head>
+	<body style="margin:0px;background-color:#efefef;"">
+
+		<div class="title" Onclick="window.location.href='index.html'"> Lee Tsz Lok </div>	
+
+		<ul>
+			<li>
+				<a class="listlink" href="home.html">Home</a>
+			</li>
+
+			<li>
+				<a class="listlink active" href="comment.html">Comment</a>
+			</li>
+			<li>
+				<a class="listlink" href="about.html">About</a>
+			</li>
+			<li style="float:right">
+				<a class="listlink" href="login.html">Login</a>
+			</li>
+		</ul>
+
+		<img src="back1.jpg" alt="no see me." class="image">
+		
+		
+		<p class="context">
+	<input id="user" type="text" name="username" placeholder="Username" required>
+	<input id="comm" type="text" name="comment" placeholder="Comment" required>	
+	<input type="submit" value="Comment" onclick="storedata()">
+		
+		</p>
+
+
+			<footer>
+						<p class="footfont">&copy; 2019</p>		
+						<p class="footfont">Posted by Lee Tsz Lok</p>
+						<p class="footfont">
+							<span id="date_time"/>
+						</p>	 
+						<script type="text/javascript"> window.onload = date_time('date_time');</script>
+						<p class="footfont">Contact information: <a href="mailto:leetszlok909@icloud.com" style="color:white">leetszlok909@icloud.com</a>.</p>
+					</footer>
+
+		</body>
+	</html>
+	
