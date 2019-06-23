@@ -7,7 +7,8 @@
 		<title> Lee Tsz Lok Homepage</title>
 		<style type="text/css">
 
-
+* { padding: 0; margin: 0; }
+canvas { background: #eee; display: block; margin: 0 auto; }
 .title{background-color:#e5feff;color:#cbaaff;font-size:30px;font-weight:bold;padding:10px 20px;width:fit-content;}
 .menu{margin:20px;}
 .hide{display:none;}
@@ -40,13 +41,7 @@ li a:hover:not(.active) { background-color: #111;}
 	
 		</style>
 
-		<script type="text/javascript" src="date_time.js">
-
-
-
-
-
-		</script>
+		<script type="text/javascript" src="date_time.js"></script>
 
 	</head>
 
@@ -87,10 +82,11 @@ li a:hover:not(.active) { background-color: #111;}
 					<br>
 		 Please click 'about' to see my fyp if interested.</p>
 
+	<canvas id="myCanvas" width="480" height="320"/>
+	<script type="text/javascript" src="game.js"></script>
+	
 
-
-
-					<footer>
+					<footer style="margin-top:50px;">
 						<p class="footfont">&copy; 2019</p>		
 						<p class="footfont">Posted by Lee Tsz Lok</p>
 						<p class="footfont">
