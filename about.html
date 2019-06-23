@@ -21,6 +21,11 @@ li {float:left;border-right:1px solid #bbb;}
 li a{display:inline-block;color:white;text-align:center;padding:20px 50px;text-decoration:none;}
 li:last-child{border-right:none;}
 li a:hover:not(.active) { background-color: #111;}
+#upperlist ul{ list-style-type: none; margin: 0; padding: 0;overflow:hidden;background-color:#333;}
+#upperlist li{float:left;border-right:1px solid #bbb;}
+#upperlist li a{display:inline-block;color:white;text-align:center;padding:20px 50px;text-decoration:none;}
+#upperlist a:hover:not(.active) { background-color: #111;}
+
 
 
 	@media screen and (max-width:800px){
@@ -33,6 +38,7 @@ li a:hover:not(.active) { background-color: #111;}
 	.context2{font-size:15px;margin:10px;overflow-y: auto; height:300px;width:300px;}
 	.listlink{font-size:15px;}	
 	li a{display:inline-block;color:white;text-align:center;padding:20px 20px;text-decoration:none;}
+	#upperlist li a{font-size:10px;}
 	}
 }
 		</style>
@@ -43,6 +49,7 @@ li a:hover:not(.active) { background-color: #111;}
 	<body style="margin:0px;background-color:#efefef;"">
 
 		<div class="title" Onclick="window.location.href='index.html'"> Lee Tsz Lok </div>	
+<div class="upperlist">
 
 		<ul>
 			<li>
@@ -61,6 +68,7 @@ li a:hover:not(.active) { background-color: #111;}
 				<a class="listlink"href="login.html">Login</a>
 			</li>
 		</ul>
+		</div>
 
 		<img src="back2.jpg" alt="no see me." class="image">
 
