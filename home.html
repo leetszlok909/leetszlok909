@@ -17,6 +17,10 @@
 .listlink{font-size:20px;}	
 .active { background-color: #4CAF50; color: white;}
 footer{width: 100%;height:180px;position:relative;background: #333;bottom:0;}
+#upperlist ul{ list-style-type: none; margin: 0; padding: 0;overflow:hidden;background-color:#333;}
+#upperlist li{float:left;border-right:1px solid #bbb;}
+#upperlist li a{display:inline-block;color:white;text-align:center;padding:20px 50px;text-decoration:none;}
+#upperlist a:hover:not(.active) { background-color: #111;}
 ul { list-style-type: none; margin: 0; padding: 0;overflow:hidden;background-color:#333;}
 li {float:left;border-right:1px solid #bbb;}
 li a{display:inline-block;color:white;text-align:center;padding:20px 50px;text-decoration:none;}
@@ -31,6 +35,7 @@ li a:hover:not(.active) { background-color: #111;}
 	.context{font-size:10px;margin:10px 10px;overflow-y: auto;}
 	.listlink{font-size:15px;}	
 	li a{display:inline-block;color:white;text-align:center;padding:20px 20px;text-decoration:none;}
+	#upperlist li a{font-size:10px;}
 	}
 	
 		</style>
@@ -49,7 +54,7 @@ li a:hover:not(.active) { background-color: #111;}
 
 
 		<div class="title" Onclick="window.location.href='index.html'"> Lee Tsz Lok </div>	
-
+<div class="upperlist">
 		<ul>
 			<li>
 				<a class="active listlink" href="home.html">Home</a>
@@ -67,7 +72,7 @@ li a:hover:not(.active) { background-color: #111;}
 
 
 		</ul>
-
+</div>
 
 		<img src="back.jpg" alt="no see me." class="image">
 
